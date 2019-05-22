@@ -360,7 +360,7 @@ p{
     background:rgba(0,0,0,0.2); 
   }
   
-  .balloonUp:nth-child(2){ background:blue; animation-duration:4.5s; }
+  .balloonUp:nth-child(2){ background:yellow; animation-duration:4.5s; }
   .balloonUp:nth-child(2):before { color:peachpuff;  }
   
   .balloonUp:nth-child(3){ background:hsl(56, 37%, 85%); animation-duration:4.5s; }
@@ -378,7 +378,7 @@ p{
   }
   @keyframes balloons1 {
     0%,100%{ transform:translateY(0) rotate(-4deg); }
-    50%{ transform:translateY(-1700px)  translateX(+25px) rotate(4deg); }
+    50%{ transform:translateY(-1690px)  translateX(+25px) rotate(4deg); }
   }
   
   
