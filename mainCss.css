@@ -1,7 +1,7 @@
 body{
     background-image: url("background.jpg");
     background-repeat: no-repeat;
-    background-size: 1000px 1610px;
+    background-size: 1000px 1650px;
 }
 #txtBox{
     text-align: center;
@@ -64,7 +64,7 @@ p{
 }
 .container {
 	width: 500px;
-	height: 500px;
+	height: 100px;
 	position: relative;
 	top: 0;
 	bottom: 0;
@@ -109,10 +109,10 @@ p{
   animation: lds-eclipse 0.3s linear 5 ;
   width: 96px;
   height: 96px;
-  top: 201px;
+  top: 0;
   left: 201px;
   border-radius: 50%;
-  box-shadow: 0 4px 0 0 #ffff;
+  box-shadow: 0 4px 0 0 white;
   -webkit-transform-origin: 48px 50px;
   transform-origin: 48px 50px;
 }
