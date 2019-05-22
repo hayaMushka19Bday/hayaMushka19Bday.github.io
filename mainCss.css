@@ -346,11 +346,12 @@ p{
   }
   
   .balloonUp:after {
-   display:inline-block; top:153px;
-   top:150px;
-   position:absolute;
-   height:250px;
-   left: 60px;
+    display:inline-block;
+    top:150px;
+    position:absolute;
+    height:250px;
+    left: 60px;
+    width:1px;
     margin:0 auto;
     content:"";
     background:rgba(0,0,0,0.2); 
