@@ -1,11 +1,12 @@
 body{
     background-image: url("background.jpg");
     background-repeat: no-repeat;
-    background-size: 1000px 1650px;
+    background-size: 1000px 1700px;
 }
 #txtBox{
     text-align: center;
     border-style: solid;
+    border-bottom: none;
     border-width: 1px;
     border-color: white; 
     text-align: center;
