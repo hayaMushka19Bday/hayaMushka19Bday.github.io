@@ -27,18 +27,21 @@ body{
     color:white;
 }
 #headBracha{
+    padding-top: 10px !important;
     font-size: 70px;
     letter-spacing: 25px;
     text-align: center;
 }
 #txtBracha{
-    font-size: 20px;
+    font-size: 10px;
 }
 #divBox{
     position: relative;
     background-color: #D6A04F;
     background: linear-gradient(
     to bottom,
+    #D6A04F,
+    #D6A04F,
     #D6A04F,
     #D6A04F, 
     transparent
