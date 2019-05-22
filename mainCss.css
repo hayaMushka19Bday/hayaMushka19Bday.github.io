@@ -36,6 +36,12 @@ body{
 #divBox{
     position: relative;
     background-color: #D6A04F;
+    background: linear-gradient(
+    to bottom,
+    #D6A04F,
+    #D6A04F, 
+    transparent
+  );
     margin-top: 10.3em;
     margin-bottom: 300px;
     margin-right: 215px;
@@ -59,12 +65,62 @@ p{
 .container {
 	width: 500px;
 	height: 500px;
-	position: absolute;
+	position: relative;
 	top: 0;
 	bottom: 0;
 	left: 0;
 	right: 0;
 	margin: auto;
+}
+@keyframes lds-eclipse {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  50% {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes lds-eclipse {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  50% {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+.lds-eclipse {
+  position: relative;
+}
+.lds-eclipse div {
+  position: absolute;
+  -webkit-animation: lds-eclipse 0.3s linear 5;
+  animation: lds-eclipse 0.3s linear 5 ;
+  width: 96px;
+  height: 96px;
+  top: 201px;
+  left: 201px;
+  border-radius: 50%;
+  box-shadow: 0 4px 0 0 #ffff;
+  -webkit-transform-origin: 48px 50px;
+  transform-origin: 48px 50px;
+}
+.lds-eclipse {
+  width: 200px !important;
+  height: 200px !important;
+  -webkit-transform: translate(-100px, -100px) scale(1) translate(100px, 100px);
+  transform: translate(-100px, -100px) scale(1) translate(100px, 100px);
 }
 
 .btn {
@@ -73,7 +129,6 @@ p{
     border: none;
     color: inherit;
     background: none;
-    display: inline-block;
     text-transform: uppercase;
     letter-spacing: 1px;
     font-weight: 300;
