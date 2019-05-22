@@ -360,7 +360,7 @@ p{
     background:rgba(0,0,0,0.2); 
   }
   
-  .balloonUp:nth-child(2){ background:#D6A04F; animation-duration:4.5s; }
+  .balloonUp:nth-child(2){ background:red; animation-duration:4.5s; }
   .balloonUp:nth-child(2):before { color:peachpuff;  }
   
   .balloonUp:nth-child(3){ background:hsl(56, 37%, 85%); animation-duration:4.5s; }
