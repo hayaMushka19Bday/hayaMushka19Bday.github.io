@@ -381,7 +381,9 @@ p{
     50%{ transform:translateY(-1645px)  translateX(+25px) rotate(4deg); }
   }
   
-  
+  #ps{
+    padding-left: 475px;
+  }
   .balloon:before {
     content:"▲";
     font-size:20px;
