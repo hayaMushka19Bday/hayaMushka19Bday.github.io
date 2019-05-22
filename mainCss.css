@@ -378,7 +378,7 @@ p{
   }
   @keyframes balloons1 {
     0%,100%{ transform:translateY(0) rotate(-4deg); }
-    50%{ transform:translateY(-1690px)  translateX(+25px) rotate(4deg); }
+    50%{ transform:translateY(-1650px)  translateX(+25px) rotate(4deg); }
   }
   
   
