@@ -117,7 +117,7 @@ p{
   top: 0;
   left: 201px;
   border-radius: 50%;
-  box-shadow: 0 4px 0 0 black;
+  box-shadow: 0 4px 0 0 white;
   -webkit-transform-origin: 48px 50px;
   transform-origin: 48px 50px;
 }
@@ -381,15 +381,12 @@ p{
     50%{ transform:translateY(-25px) rotate(4deg); }
   }
   @keyframes balloons1 {
-    0%,100%{ transform:translateY(1200px) rotate(-4deg); }
-    50%{ transform:translateY(-240px)  translateX(+25px) rotate(4deg); }
+    0%,100%{ transform:translateY(1500px) rotate(-4deg); }
+    50%{ transform:translateY(-620px)  translateX(+25px) rotate(4deg); }
   }
-  #planeBtn{
-    display: none;
-  }
+
   #ps{
     padding-left: 475px;
-    display: none;
   }
   .balloon:before {
     content:"▲";
@@ -476,7 +473,7 @@ p{
   }
   
   #form input{
-    color:red;
+    color:gray;
     padding:1em;
     margin:5px;
     background:white;
