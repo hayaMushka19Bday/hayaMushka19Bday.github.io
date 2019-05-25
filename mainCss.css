@@ -35,6 +35,7 @@ body{
 #txtBracha{
     font-size: 10px;
 }
+
 #divBox{
     position: relative;
     background-color: #D6A04F;
@@ -116,7 +117,7 @@ p{
   top: 0;
   left: 201px;
   border-radius: 50%;
-  box-shadow: 0 4px 0 0 white;
+  box-shadow: 0 4px 0 0 black;
   -webkit-transform-origin: 48px 50px;
   transform-origin: 48px 50px;
 }
@@ -372,17 +373,23 @@ p{
   .balloonUp:nth-child(5){ background:hsl(56, 37%, 85%); animation-duration:4.5s; }
   .balloonUp:nth-child(5):before { color:hsl(56, 27%, 75%);  }
   
+  #btn2{
+    display: none;
+  }
   @keyframes balloons {
     0%,100%{ transform:translateY(0) rotate(-4deg); }
     50%{ transform:translateY(-25px) rotate(4deg); }
   }
   @keyframes balloons1 {
-    0%,100%{ transform:translateY(0) rotate(-4deg); }
-    50%{ transform:translateY(-1750px)  translateX(+25px) rotate(4deg); }
+    0%,100%{ transform:translateY(1200px) rotate(-4deg); }
+    50%{ transform:translateY(-240px)  translateX(+25px) rotate(4deg); }
   }
-  
+  #planeBtn{
+    display: none;
+  }
   #ps{
     padding-left: 475px;
+    display: none;
   }
   .balloon:before {
     content:"▲";
@@ -434,23 +441,179 @@ p{
   .balloon:nth-child(5){ background:#D6A04F; animation-duration:5s; }
   .balloon:nth-child(5):before { color:peachpuff;  }
   */
-  .balloon:nth-child(7){ background:hsl(56, 37%, 85%); animation-duration:4.5; }
+  .balloon:nth-child(7){ background:hsl(56, 37%, 85%)!important; animation-duration:4.5; }
   .balloon:nth-child(7){ animation:balloons1 14s ease-in-out infinite;}
-  .balloon:nth-child(7):before { color:hsl(56, 27%, 75%);;  }
+  .balloon:nth-child(7):before { color:hsl(56, 27%, 75%)!important;;  }
 
-  .balloon:nth-child(10){ background:#D6A04F !important; animation-duration:4.5s; }
-  .balloon:nth-child(10){ animation:balloons1 14s ease-in-out infinite;}
-  .balloon:nth-child(10):before { color:peachpuff !important;  }
+  .balloon:nth-child(12){ background:#D6A04F !important; animation-duration:4.5s; }
+  .balloon:nth-child(12){ animation:balloons1 14s ease-in-out infinite;}
+  .balloon:nth-child(12):before { color:peachpuff !important;  }
+  
 
-  .balloon:nth-child(9){ background:hsl(56, 37%, 85%); animation-duration:4.5s; }
+  .balloon:nth-child(9){ background:hsl(56, 37%, 85%)!important; animation-duration:4.5s; }
   .balloon:nth-child(9){ animation:balloons1 14s ease-in-out infinite;}
-  .balloon:nth-child(9):before { color:hsl(56, 27%, 75%);  }
+  .balloon:nth-child(9):before { color:hsl(56, 27%, 75%)!important;  }
   
-  .balloon:nth-child(8){ background:#D6A04F; animation-duration:4.5s; }
-  .balloon:nth-child(8){ animation:balloons1 14s ease-in-out infinite;}
-  .balloon:nth-child(8):before { color:peachpuff;  }
-  
-  .balloon:nth-child(10){ background:hsl(56, 37%, 85%); animation-duration:4.5s; }
+  .balloon:nth-child(10){ background:#D6A04F!important; animation-duration:4.5s; }
   .balloon:nth-child(10){ animation:balloons1 14s ease-in-out infinite;}
-  .balloon:nth-child(10):before { color:hsl(56, 27%, 75%);  }
+  .balloon:nth-child(10):before { color:peachpuff!important;  }
 
+  .v{
+    font-family: 'Amatic SC', cursive;
+  }
+  #form{
+    
+    border:5px solid hsl(56, 37%, 85%);
+    border-radius:5%;
+    background:transparent;
+    width:300px;
+    text-align:center;
+    margin:100px auto;
+    padding-bottom: 25px !important;
+  }
+  #form h1{
+    color:#D6A04F;
+  }
+  
+  #form input{
+    color:red;
+    padding:1em;
+    margin:5px;
+    background:white;
+    border:2px solid hsl(56, 37%, 85%);
+    border-radius:3%;
+  }
+  #form .text{
+    width:250px;
+    height:2px;
+  }
+  #form .submit-button{
+    font-family: 'Amatic SC', cursive;
+    font-weight: bolder;
+    font-size:20px;
+    color: hsl(56, 27%, 75%);
+    background:transparent;
+    margin:15px;
+    width:45%;
+    padding:5px;
+    border:3px solid hsl(56, 37%, 85%);
+    border-radius:7%;
+  }
+
+  #dialog {
+    position: absolute;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.15);
+    transition: visibility 0s linear 0.5s,opacity 0.5s linear;
+    opacity: 0;
+    visibility: hidden;
+  }
+  .dialog_state {
+    visibility: hidden;
+    opacity: 0;
+    display: none;
+  }
+  .dialog_state:checked + #dialog,
+  #dialog.dialog_open {
+    transition-delay:0s;
+    opacity: 1;
+    visibility: visible;
+  }
+  #dlg-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    width: 100vw;
+    height: 100vh;
+    cursor: pointer;
+  }
+  .dialog_state:checked + #dialog #dlg-wrap {
+    max-height: 24rem;
+    opacity: 1;
+    padding: 2rem;
+  }
+  #dlg-wrap {
+    position: relative;
+    z-index: 1;
+    display: block;
+    box-sizing: border-box;
+    margin: 0 auto;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 640px;
+    padding: 2rem;
+    border-radius: 0.25rem;
+    /*border: 1px solid #969696;*/
+    background: #fff;
+    box-shadow: 1px 1px 6px rgba(0,0,0,0.3);
+    max-height: 0;
+    opacity: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    overflow: hidden;
+    transition: all .5s;
+  }
+  #dlg-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 2rem;
+    height: 2rem;
+    line-height: 2rem;
+    text-align: center;
+    cursor: pointer;
+  }
+  h2#dlg-header {
+    text-transform: initial;
+    letter-spacing: -0.025em;
+    margin: 0 0 1rem;
+  }
+  #dlg-content {
+    font-weight: 300;
+    font-style: italic;
+    letter-spacing: 0.015em;
+  }
+  #dlg-prompt .button {
+    margin: 1rem 0.5rem;
+    border-radius: 1.5rem;
+  }
+  
+  
+  
+  .main_area {
+    transition: all 0.5s ease-out;
+  }
+  .dialog_state:checked ~ .main_area,
+  .main_area.dialog_open {
+    filter: blur(6px);
+  }
+  
+
+  
+  /* Console */
+  #console {position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    box-sizing: border-box;
+    background: #f0f0f0;
+    color: #606060;
+    letter-spacing: 0em;
+    text-align: left;
+    padding: 2px;
+    overflow-y: scroll;}
+#passs{
+margin-bottom: 25px !important;
+}
+   #console p {margin: 0; padding: 0;} 
+   #console p em {font-style: none;font-weight: 700;}
+  
+  
+  

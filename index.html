@@ -6,59 +6,45 @@
     <title>hayaMushkaBday</title>
     <link rel="stylesheet" href="mainCss.css" />
      <link rel="stylesheet" href="animate.css" />
+     <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
     <script src="mainJs.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai&display=swap" rel="stylesheet">
 </head>
 <body>
+
         <div class="balloonUp" id="upBaloon1"></div>
         <div class="balloonUp"  id="upBaloon2"></div>
         <div class="balloonUp"  id="upBaloon3"></div>
         <div class="balloonUp"  id="upBaloon4"></div>
         <div class="balloonUp"  id="upBaloon5"></div>
-<div id="divBox">
-    <div id="txtBox">
-       <p class="textType" id="headBracha" style="padding-top:60px;" >
-happay
-       </p>
-       <p class="textType" id="headBracha">
-Birthday
-       </p>
-       <p class="textType" id="txtBracha">
-           טוב אז שברתי קצת את הראש.. לא באמת יודע מה לכתוב.
-           לא טוב בזה ולפעמים לא הכי יודע לבטא מה שחושב.
-        .רציתי רק להגיד שבאמת מדהים לי איתך.ובחיים לא ציפיתי להתחבר עם מישהי בצורה כזאת ובטח שלא כלכך מהר</br>
-        רציתי לאחל לך כמה דברים:
-        אז דבר ראשון רציתי לאחל לך לטעות.כי המשמעות של לטעות זה ללמוד.
-        זה אומר שתמיד משתפרים. (וכן ימצחיקה יכלתי פשוט לאחל לך להצליח אבל אז לא תמיד מעריכים את המקום שנמצאים.)
-        דבר שני רציתי לאחל לך לחלום. אבל לא סתם,לחלום באמת. לחלום בגדול.
-        לחלום את החלומות הכי משוגעים שאת מסוגלת לחלום. לחלום הכי פרוע והכי יוצא מגדר הרגיל שאפשר.
-        גם אם כלום לא יתגשם לפחות נהינת מהדרך.
-        אני רוצה לאחל לך גם שתמשיכי להיות עצמך.
-        כי אם לא, יותר מזה שאת תפסידי, העולם יפסיד
-        העולם יפסיד את הצחוק המתגלגל שלך,את החיוך היפה שלך,את התום שקורן ממך 
-        ועוד מליון ואחת דברים אבל יותר מהכול העולם יפסיד את האדם שאת.. 
-        אז פשוט תמשיכי להיות עצמך.</br>
-        אחרון חביב רציתי לאחל לך להאמין בעצמך..
-        להבין כמה לעזאזל את שווה. כמה את מצחיקה, שנונה, חכמה, פלפלית לא קטנה, שונה, יפיפייה, יפיפייה, יפיפייה, יפיפייה
-        (בוא נגיד שאם היית מספר היית 496351).
-        שתאמיני באמת שאת יכולה להכל. 
-        במבט לעתיד וגם אם לא נהיה ביחד אני כלכך שמח שיצא לי להכיר אותך.
-        יצא לי כלכך הרבה ללמוד ממך ובדברים הקטנים שלך את מכניסה לי פרספקטיבה.
-        אז אני אוהב אותך .
-        ובמילותיו של שלמה ארצי בשיר ירח - "קשה לי להתרכז, כי יופייך עוד מהמם אותח"
-        אגיד לך פשוט מזל טוב </br>
-        אורי</br>
-                              <span id="ps"> נ.ב.</span></br>
-        אני יודע שאת אוהבת לשמור דברים.. פשוט תלחצי על המטוס.. הברכה תעוף כבר למייל שלך.
-  <div class="container">
-            <button class="btn btn-inside btn-boarder" id="btn-boarder"><img src="https://i.cloudup.com/gBzAn-oW_S-2000x2000.png" width="64px" height="64px" id="plane"></button>
-            <div style="width:100%;height:100%" class="asd" id="asdd"><div></div></div>
-			<div class="bg"><img src="https://i.cloudup.com/2ZAX3hVsBE-3000x3000.png" id="bg" width="32px" height="32px" style="opacity:0;"></div>
-			<div class="around" onclick="ani(); anitwo();"></div>
-        </div>
-   </p>
+
+   
+<div id="form" class="v">
+  <h1>?אז אם היית מספר איזה מספר היית</h1>
+  <input id="passs" class="text" type="text" name="user" placeholder=""/>
+
+</br>
+          <label id="btn1" onclick="bbb()" class="button submit-button"> בוא נראה אם את זוכרת</label>
+        </br>
+
+    
+  <input type="checkbox" name="dialog_state" id="dialog_state" class="dialog_state">
+  <div id='dialog'>
+    <label id="dlg-back" for="dialog_state"></label>
+    <div id='dlg-wrap'>
+      <label id="dlg-close" for="dialog_state"><i class="icon ion-ios-close-empty"></i></label>
+      <h2 id='dlg-header'></h2>
+      <div id='dlg-content'></div>
     </div>
+  </div>
+
+  
 </div>
+<label id="btn2" for="dialog_state" ></label></label>
+        <p id="ins"></p>
+
 <div class="balloon" id="downBaloon1"></div>
 <div class="balloon"  id="downBaloon2"></div>
 <div class="balloon"  id="downBaloon3"></div>
